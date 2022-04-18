@@ -1,10 +1,10 @@
-const SUBREDDIT='worldnews'
+const SUBREDDIT='oddlysatisfying'
+//I could make this an array of multiple subreddits
+
 function correct_url(text) {
     // Remove the slash from the end of the article link to pass to href
     var html = $.trim(text);
-    if (html) {
-        html = html.replace(/(\/$)/, '');
-    }
+    if (html) html = html.replace(/(\/$)/, '');
     return html;
 }
 
@@ -33,7 +33,7 @@ function reddit_list(news) {
 // Fetch the 10 top posts on /r/worldnews
 var news = [];
 		
-reddit.top(SUBREDDIT).t('day').limit(10).fetch(function (res) {
+reddit.top(SUBREDDIT).t('day').limit(5).fetch(function (res) {
     // console.log(res);
     for (var i = 0; i < res.data.children.length; i++) {
         // res contains JSON parsed response from Reddit

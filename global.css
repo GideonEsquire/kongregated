@@ -43,12 +43,12 @@ iframe {
 .animate-charcter {
   background-image: linear-gradient(
     -90deg,
-    #2e3440 0%,
-    #2e3440 40%,
-    #d08770 45%,
-    #d08770 50%,
-    #2e3440 60%,
-    #2e3440 100%
+    #d08770 0%,
+    #d08770 40%,
+    #2e3440 45%,
+    #2e3440 50%,
+    #d08770 60%,
+    #d08770 100%
   );
   background-size: auto auto;
   background-clip: border-box;
@@ -57,7 +57,7 @@ iframe {
   text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textclip 4s linear infinite;
+  animation: textclip 8s linear infinite;
   display: inline-block;
       font-size: 190px;
 }
