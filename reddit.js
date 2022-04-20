@@ -3,222 +3,229 @@
  * @author Sahil Muthoo <sahil.muthoo@gmail.com> (https://www.sahilm.com)
  * @license MIT
  */
- (function (window) {
-  "use strict";
-  
-  var reddit = window.reddit = {};
+;(function (window) {
+  'use strict'
 
-  reddit.hot = function (subreddit) {
-    return listing({
-      subreddit: subreddit,
-      resource: "hot"
-    });
-  };
+  var reddit = (window.reddit = {})
 
-  reddit.top = function (subreddit) {
-    return listing({
-      subreddit: subreddit,
-      resource: "top"
-    }, ["t"]);
-  };
+  reddit.hot = (subreddit) => listing({ subreddit: subreddit, resource: 'hot' })
 
-  reddit.controversial = function (subreddit) {
-    return listing({
-      subreddit: subreddit,
-      resource: "controversial"
-    }, ["t"]);
-  };
+  reddit.top = (subreddit) =>
+    listing({ subreddit: subreddit, resource: 'top' }, ['t'])
 
-  reddit["new"] = function (subreddit) {
-    return listing({
-      subreddit: subreddit,
-      resource: "new"
-    });
-  };
+  reddit.controversial = (subreddit) =>
+    listing({ subreddit: subreddit, resource: 'controversial' }, ['t'])
 
-  reddit.about = function (subreddit) {
-    return fetch({
-      subreddit: subreddit,
-      resource: "about"
-    });
-  };
+  reddit['new'] = (subreddit) =>
+    listing({ subreddit: subreddit, resource: 'new' })
 
-  reddit.random = function (subreddit) {
-    return fetch({
-      subreddit: subreddit,
-      resource: "random"
-    });
-  };
+  reddit.about = (subreddit) =>
+    fetch({ subreddit: subreddit, resource: 'about' })
 
-  reddit.info = function (subreddit) {
+  reddit.random = (subreddit) =>
+    fetch({ subreddit: subreddit, resource: 'random' })
+
+  reddit.info = (subreddit) => {
     var on = {
       subreddit: subreddit,
-      resource: "api/info"
-    };
-    return withFilters(on, ["id", "limit", "url"]);
-  };
+      resource: 'api/info',
+    }
+    return withFilters(on, ['id', 'limit', 'url'])
+  }
 
   reddit.comments = function (article, subreddit) {
     var on = {
       subreddit: subreddit,
-      resource: "comments/" + article
-    };
-    return withFilters(on, ["comment", "context", "depth", "limit", "sort"]);
-  };
+      resource: 'comments/' + article,
+    }
+    return withFilters(on, ['comment', 'context', 'depth', 'limit', 'sort'])
+  }
 
   reddit.recommendedSubreddits = function (srnames) {
     var on = {
-      resource: "api/recommend/sr/" + srnames
-    };
-    return withFilters(on, ["omit"]);
-  };
+      resource: 'api/recommend/sr/' + srnames,
+    }
+    return withFilters(on, ['omit'])
+  }
 
   reddit.subredditsByTopic = function (query) {
     var on = {
-      resource: "api/subreddits_by_topic",
+      resource: 'api/subreddits_by_topic',
       params: {
-        query: query
-      }
-    };
-    return fetch(on);
-  };
+        query: query,
+      },
+    }
+    return fetch(on)
+  }
 
   reddit.search = function (query, subreddit) {
     var on = {
       subreddit: subreddit,
-      resource: "search",
+      resource: 'search',
       params: {
-        q: query
-      }
-    };
-    return withFilters(on, ["after", "before", "count", "limit", "restrict_sr", "show", "sort", "syntax", "t"]);
-  };
+        q: query,
+      },
+    }
+    return withFilters(on, [
+      'after',
+      'before',
+      'count',
+      'limit',
+      'restrict_sr',
+      'show',
+      'sort',
+      'syntax',
+      't',
+    ])
+  }
 
   reddit.searchSubreddits = function (query) {
     return listing({
-      resource: "subreddits/search",
+      resource: 'subreddits/search',
       params: {
-        q: query
-      }
-    });
-  };
+        q: query,
+      },
+    })
+  }
 
   reddit.popularSubreddits = function () {
     return listing({
-      resource: "subreddits/popular"
-    });
-  };
+      resource: 'subreddits/popular',
+    })
+  }
 
   reddit.newSubreddits = function () {
     return listing({
-      resource: "subreddits/new"
-    });
-  };
+      resource: 'subreddits/new',
+    })
+  }
 
   reddit.user = function (username, where) {
     var on = {
-      resource: "user/" + username + ((typeof where === "undefined") ? "" : "/" + where)
-    };
-    return withFilters(on, ["show", "sort", "t", "type", "username", "after", "before", "count", "limit", "sr_detail"]);
-  };
+      resource:
+        'user/' + username + (typeof where === 'undefined' ? '' : '/' + where),
+    }
+    return withFilters(on, [
+      'show',
+      'sort',
+      't',
+      'type',
+      'username',
+      'after',
+      'before',
+      'count',
+      'limit',
+      'sr_detail',
+    ])
+  }
 
   function listing(on, extras) {
-    extras = extras || [];
-    return withFilters(on, ["after", "before", "count", "limit", "show"].concat(extras));
+    extras = extras || []
+    return withFilters(
+      on,
+      ['after', 'before', 'count', 'limit', 'show'].concat(extras)
+    )
   }
 
   function fetch(on) {
     return {
       fetch: function (res, err) {
-        getJSON(redditUrl(on), res, err);
-      }
-    };
+        getJSON(redditUrl(on), res, err)
+      },
+    }
   }
 
   function withFilters(on, filters) {
-    var ret = {};
-    on.params = on.params || {};
-    filters = filters || [];
+    var ret = {}
+    on.params = on.params || {}
+    filters = filters || []
 
     var without = function (object, key) {
-      var ret = {};
+      var ret = {}
       for (var prop in object) {
         if (object.hasOwnProperty(prop) && prop !== key) {
-          ret[prop] = object[prop];
+          ret[prop] = object[prop]
         }
       }
-      return ret;
-    };
+      return ret
+    }
 
     var filter = function (f) {
-      if (f === "show") {
+      if (f === 'show') {
         return function () {
-          on.params[f] = "all";
-          return without(this, f);
-        };
+          on.params[f] = 'all'
+          return without(this, f)
+        }
       } else {
         return function (arg) {
-          on.params[f] = arg;
-          return without(this, f);
-        };
+          on.params[f] = arg
+          return without(this, f)
+        }
       }
-    };
+    }
 
     for (var i = 0; i < filters.length; i++) {
-      ret[filters[i]] = filter(filters[i]);
+      ret[filters[i]] = filter(filters[i])
     }
     ret.fetch = function (res, err) {
-      getJSON(redditUrl(on), res, err);
-    };
-    return ret;
+      getJSON(redditUrl(on), res, err)
+    }
+    return ret
   }
 
   function redditUrl(on) {
-    var url = "https://www.reddit.com/";
+    var url = 'https://www.reddit.com/'
     var keys = function (object) {
-      var ret = [];
+      var ret = []
       for (var prop in object) {
         if (object.hasOwnProperty(prop)) {
-          ret.push(prop);
+          ret.push(prop)
         }
       }
-      return ret;
-    };
+      return ret
+    }
 
     if (on.subreddit !== undefined) {
-      url += "r/" + on.subreddit + "/";
+      url += 'r/' + on.subreddit + '/'
     }
-    url += on.resource + ".json";
+    url += on.resource + '.json'
     if (keys(on.params).length > 0) {
-      var qs = [];
+      var qs = []
       for (var param in on.params) {
         if (on.params.hasOwnProperty(param)) {
-          qs.push(encodeURIComponent(param) + "=" +
-            encodeURIComponent(on.params[param]));
+          qs.push(
+            encodeURIComponent(param) +
+              '=' +
+              encodeURIComponent(on.params[param])
+          )
         }
       }
-      url += "?" + qs.join("&");
+      url += '?' + qs.join('&')
     }
-    return url;
+    return url
   }
 
   function getJSON(url, res, err) {
-    get(url, function (data) {
-      res(JSON.parse(data));
-    }, err);
+    get(
+      url,
+      function (data) {
+        res(JSON.parse(data))
+      },
+      err
+    )
   }
 
   function get(url, res, err) {
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", url, true);
+    var xhr = new XMLHttpRequest()
+    xhr.open('GET', url, true)
     xhr.onload = function () {
-      return res(xhr.response);
-    };
+      return res(xhr.response)
+    }
     xhr.onerror = function () {
       if (err !== undefined) {
-        return err(xhr.response);
+        return err(xhr.response)
       }
-    };
-    xhr.send();
+    }
+    xhr.send()
   }
-})(window);
+})(window)

@@ -51,11 +51,6 @@ function reddit_list(news) {
         )
     )
   })
-
-  jQuery('.re-under').fitText(6, {
-    minFontSize: '9px',
-    maxFontSize: '14px',
-  })
 }
 
 var news = []
