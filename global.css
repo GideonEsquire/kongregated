@@ -15,6 +15,7 @@ body {
   box-sizing: border-box;
   font-family: Lora, sans-serif;
   background: #2e3440;
+  /* background: #d8dee8; */
 }
 
 iframe {
@@ -60,7 +61,7 @@ iframe {
   -webkit-text-fill-color: transparent;
   animation: textclip 8s linear infinite;
   display: inline-block;
-      font-size: 190px;
+      font-size: 5em;
 }
 
 @keyframes textclip {
