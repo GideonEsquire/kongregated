@@ -9,8 +9,9 @@ function correct_url(text) {
 
 function reddit_list(news) {
   var l = $('#posts .list-unstyled')
+
   // clear the existing list
-  $('#posts .list-unstyled li').remove()
+  $(' #posts .list-unstyled .wrapper').remove()
 
   $.each(news, function (index, obj) {
     var link = correct_url(obj.url)
@@ -43,11 +44,7 @@ function reddit_list(news) {
               "<p class='re-under'><a target = '_blank' href = " +
                 'http://reddit.com' +
                 obj.permalink +
-                " style = 'outline:0'><font color='grey'><b>(score: " +
-                obj.score +
-                ' | comments: ' +
-                obj.num_comments +
-                ') on reddit.com</b></font></a><p>'
+                ' <b>comments</b></font></a>'
             )
           )
       )

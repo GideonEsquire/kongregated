@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Nunito:wght@500;700&display=swap');
 
+/* Polar night */
+/* #2e3440 #3b4252 #434c5e #4c566a */
+
+/* Sn0w storm */
+/* #d8dee9 #e5e9f0 #eceff4 */
+
+/* Frost */
+/* #8fbcbb #88c0d0 #81a1c1 #5e81ac */
+
+/* Aurora */
+/* #bf616a #d08770 #ebcb8b #a3be8c #b48ead */
+
 *::-webkit-scrollbar {
   display: none;
 }
@@ -9,29 +21,13 @@
   margin: 0;
   padding: 0;
   color: #d8dee8;
+  text-decoration: none;
 }
 
 body {
   box-sizing: border-box;
   font-family: Lora, sans-serif;
   background: #2e3440;
-  /* background: #d8dee8; */
-}
-
-iframe {
-  margin: 20px;
-}
-
-li {
-  margin: 20px;
-  text-align: left;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  text-align: left;
 }
 
 .container {
@@ -51,6 +47,32 @@ ul {
   overflow: hidden;
 }
 
+.list-unstyled {
+  display: flex;
+  /* width: 600px; */
+  flex-direction: column;
+  align-items: center;
+}
+
+iframe {
+  margin: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+li {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin: 20px;
+  /* text-align: left; */
+}
+
 /* #posts { */
 /*   display: flex; */
 /*   max-width: 680px; */
@@ -65,12 +87,13 @@ ul {
 .animate-charcter {
   background-image: linear-gradient(
     -90deg,
-    #d08770 0%,
-    #d08770 40%,
-    #2e3440 45%,
-    #2e3440 50%,
-    #d08770 60%,
-    #d08770 100%
+    #5e81ac 0%,
+    #81a1c1 30%,
+    #88c0d0 40%,
+    #d8dee8 50%,
+    #8fbcbb 70%,
+    #5e81ac 100%
+    
   );
   background-size: auto auto;
   background-clip: border-box;
@@ -81,7 +104,7 @@ ul {
   -webkit-text-fill-color: transparent;
   animation: textclip 8s linear infinite;
   display: inline-block;
-      font-size: 5em;
+  font-size: 5em;
 }
 
 @keyframes textclip {
@@ -91,20 +114,27 @@ ul {
 }
 
 /*Scale text*/
- .re {
-    margin-bottom:0px;
+.re {
+  width: 75%;
+  padding-right: 5px;
 }
+
 .re-title {
-    font-size:20px;
+  font-size: 20px;
 }
+
 .re-under {
-    margin-top:1px;
+  display: flex;
+  width: 25%;
+  justify-content: right;
+  align-items: center;
 }
+
 @media all and (max-width: 500px) {
-    /* screen size until 500px */
-    .re-title {
-        font-size: 16px;
-        /* 0.8x default size */
-    }
+  /* screen size until 500px */
+  .re-title {
+    font-size: 16px;
+    /* 0.8x default size */
+  }
 }
-/*Thumbnail rules*/ 
+/*Thumbnail rules*/
