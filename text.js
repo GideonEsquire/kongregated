@@ -1,4 +1,4 @@
-const SUBREDDITS = ['oddlysatisfying', 'awww', 'worldnews']
+if (!SUBREDDITS) {var SUBREDDITS = ['oddlysatisfying', 'awww', 'worldnews']}
 
 function correct_url(text) {
   // Remove the slash from the end of the article link to pass to href
@@ -60,9 +60,7 @@ for (let index = 0; index < SUBREDDITS.length; index++) {
     .t('day')
     .limit(5)
     .fetch(function (res) {
-      // console.log(res);
       for (var i = 0; i < res.data.children.length; i++) {
-        // res contains JSON parsed response from Reddit
         news.push(res.data.children[i].data)
       }
       reddit_list(news)
