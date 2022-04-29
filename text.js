@@ -1,4 +1,6 @@
-if (!SUBREDDITS) {var SUBREDDITS = ['oddlysatisfying', 'awww', 'worldnews']}
+if (!SUBREDDITS) {
+  var SUBREDDITS = ['oddlysatisfying', 'awww', 'worldnews']
+}
 
 function correct_url(text) {
   // Remove the slash from the end of the article link to pass to href
