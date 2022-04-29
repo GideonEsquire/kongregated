@@ -1,5 +1,15 @@
 if (!SUBREDDITS) {
-  var SUBREDDITS = ['oddlysatisfying', 'awww', 'worldnews']
+  var SUBREDDITS = [
+    'oddlysatisfying',
+    'awww',
+    'worldnews',
+    'perfecttiming',
+    'listentothis',
+    'futurology',
+    'askscience',
+    'dataisbeautiful',
+    'todayilearned',
+  ]
 }
 
 function correct_url(text) {

@@ -7,4 +7,4 @@ function shuffle() {
   }
 }
 
-setTimeout(() => shuffle(), 3000)
+setTimeout(() => shuffle(), 2000)

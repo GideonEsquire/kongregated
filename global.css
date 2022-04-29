@@ -61,6 +61,10 @@ body {
   width: 100%;
 }
 
+#yt {
+  width: 100%;
+}
+
 .list-unstyled {
   display: flex;
   flex-direction: column;
