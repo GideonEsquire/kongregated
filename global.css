@@ -29,20 +29,20 @@ body {
   font-family: Lora, sans-serif;
   background-color: #3b4252;
   background: linear-gradient(to left, #3b4252, #2e3440);
-  padding-bottom: 60px; /* Height of the footer testing */
+  /* padding-bottom: 60px; /* Height of the footer testing */ */
 }
 
 .main {
   opacity: 0;
   display: none;
-  transition: opacity 1s ease-in;
+  transition: opacity 0.5s ease-in;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 500px;
+  min-height: 75vh;
 }
 
 header {
@@ -92,6 +92,14 @@ li {
 img {
   width: 100%;
   margin: 20px;
+}
+
+p {
+  margin: 0.2em;
+}
+
+.terms {
+  margin: 1em 0 0 0;
 }
 
 .animate-charcter {
@@ -188,10 +196,19 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  bottom: 0;
+  /* bottom: 0; */
   font-size: 0.5em;
-  height: 60px;
+  /* height: 60px; */
   width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  margin: 3em 1em;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
 footer ul {

@@ -18,7 +18,7 @@ if (!YT_USERS) {
     'marquesbrownlee', // 'mkbhd'
     'scishow', // 'scishow'
     'testedcom', // 'adam savage tested'
-    'WSJDigitalNetwork',// 'wall street journal'
+    'WSJDigitalNetwork', // 'wall street journal'
     'msadaghd', // 'electroboom'
     'DIYPerks', // 'diy perks'
     'TheB1MLtd', // 'the b1m'
@@ -41,7 +41,7 @@ $(' #yt .list-unstyled .wrapper').remove()
 
 $.each(YT_USERS, function (index, obj) {
   let r = Math.random()
-  if (r > 0.5) {
+  if (r > 0.7) {
     x.append(
       $('<div class="wrapper"></div>').append(
         $('<li></li>').append(
