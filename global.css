@@ -47,6 +47,7 @@ body {
 
 header {
   display: flex;
+  margin: 1em 0;
   align-items: center;
   justify-content: center;
 }
@@ -92,10 +93,6 @@ li {
 img {
   width: 100%;
   margin: 20px;
-}
-
-p {
-  margin: 0.2em;
 }
 
 .terms {
@@ -210,6 +207,11 @@ footer {
   text-align: center;
   justify-content: center;
 }
+.footer-content p {
+  max-width: 620px;
+  margin: 0.2em;
+}
+
 
 footer ul {
   display: flex;
