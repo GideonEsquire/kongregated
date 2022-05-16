@@ -1,5 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Nunito:wght@500;700&display=swap');
 
+/* testing the nav */
+#checkbox, .btn span { /* Hide the checkbox input & word "Menu" in the button */
+  display: none;
+}
+
+/* Menu button - starts */
+.btn {
+  display: block;
+  position: fixed;
+  top: 0;
+  background-color: #d08770;
+  color: #fff;
+  width: 45px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  cursor: pointer;
+  border-radius: 0 0 25px 0;
+  transition: top .3s ease-in-out, width .3s ease-in-out;
+}
+
+/* Sidebar - starts */
+.sidebar {
+  background-color: #4c566a;
+  position: fixed;
+  top: 50px;
+  width: 250px;
+  height: 100%;
+  z-index: 1111;
+  transition: transform .3s ease-in-out;
+  transform: translateX(-250px);
+}
+
+.sidebar ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.sidebar ul a {
+  position: relative;
+  text-decoration: none;
+  display: block;
+  background-color: transparent;
+  color: #d8dee9;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.sidebar ul a li i {
+  margin-right: 15px;
+}
+
+/* Add margin to the icon in the second item */
+.sidebar ul a:nth-child(2) li i {
+    margin-left: 4px;
+    margin-right: 19px;
+}
+
+.sidebar ul a:hover, .sidebar ul a.active {
+    background-color: #3b4252;
+    color: #eceff4;
+}
+
+.sidebar ul a:hover::before, .sidebar ul a.active::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background-color: #d08770;
+    width: 4px;
+    height: 100%;
+}
+
+/* Effect of showing the sidebar - starts */
+#checkbox:checked ~ .sidebar {
+    transform: translateX(0);
+}
+
+#checkbox:checked + .btn {
+    width: 250px;
+    padding: 0 20px;
+}
+
+/* End of testing nav */
+
+
+
+
+
+
+
+
 /* Polar night */
 /* #2e3440 #3b4252 #434c5e #4c566a */
 
@@ -148,7 +241,7 @@ img {
     font-size: 16px;
   }
   .animate-charcter {
-    font-size: 3em;
+    font-size: 2em;
   }
 }
 

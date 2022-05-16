@@ -19,6 +19,16 @@
     </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+      integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="/nav.js"></script>
+
     <script src="/reddit.js"></script>
     <script src="/text.js"></script>
     <script
@@ -39,6 +49,46 @@
     </div>
 
     <div class="main">
+
+      <!-- nav -->
+      <input type="checkbox" id="checkbox" />
+      <label class="btn" for="checkbox">
+        <i class="fa fa-bars"></i>
+        <span>Menu</span>
+      </label>
+      <div class="sidebar">
+        <ul>
+          <a href="#"
+            ><li><i class="fa fa-home"></i>Home</li></a
+          >
+          <a href="/about">
+            <li><i class="fa fa-address-card"></i>About</li></a
+          >
+          <a href="/contact" class="active"
+            ><li><i class="fa fa-address-book"></i>Contact</li></a
+          >
+          <a href="/license"
+            ><li><i class="fa fa-file-alt"></i>License</li></a
+          >
+          <a href="/disclaimer"
+            ><li><i class="fa fa-file-contract"></i>Disclaimer</li></a
+          >
+          <hr />
+          <a href="/entertainment"
+            ><li><i class="fa fa-tv"></i>Entertainment</li></a
+          >
+          <a href="/sports"
+            ><li><i class="fa fa-football-ball"></i>Sports</li></a
+          >
+          <a href="/gaming"
+            ><li><i class="fa fa-gamepad"></i>Gaming</li></a
+          >
+          <a href="/money"
+            ><li><i class="fa fa-chart-line"></i>Money</li></a
+          >
+        </ul>
+      </div>
+
       <header>
         <!-- logo -->
         <div class="row">
@@ -46,8 +96,6 @@
             <h3 class="animate-charcter">Kongregated</h3>
           </div>
         </div>
-
-        <!-- nav -->
       </header>
 
       <div class="container">
