@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
-  <meta charset="UTF-8" />
+    <!-- this is testing to see if chrome mobile changes color -->
+    <meta name="theme-color" content="#4c566a" />
 
-  <!-- this is testing to see if chrome mobile changes color -->
-  <meta name="theme-color" content="#4c566a" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-  <!--   Google Adsense -->
-  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1986239776163139" -->
-  <!--   crossorigin="anonymous"></script> -->
-  <!-- <script> $(document).ready(function () {(adsbygoogle = window.adsbygoogle || []).push({})}) </script> -->
+    <!--   Google Adsense -->
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1986239776163139"
+      crossorigin="anonymous">
+    </script>
+    <script>$(document).ready(function () {(adsbygoogle = window.adsbygoogle || []).push({})}) </script>
 
     <link
       rel="stylesheet"
@@ -23,24 +25,23 @@
     />
     <script src="/nav.js"></script>
 
-  <script src="bruins.js"> </script>
-  <script src="/reddit.js"> </script>
-  <script src="/text.js"> </script>
-  <link rel="stylesheet" type="text/css" href="/global.css">
-  <link rel="icon" href="/favicon.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kongregated</title>
-</head>
+    <script src="bruins.js"></script>
+    <script src="/reddit.js"></script>
+    <script src="/text.js"></script>
+    <link rel="stylesheet" type="text/css" href="/global.css" />
+    <link rel="icon" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kongregated</title>
+  </head>
 
-<body>
+  <body>
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-  <div class="loader">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
-  <div class="main">
+    <div class="main">
       <!-- nav -->
       <input type="checkbox" id="checkbox" />
       <label class="btn" for="checkbox">
@@ -49,88 +50,98 @@
       </label>
       <div class="sidebar">
         <ul>
-          <a href="/"
-            ><li><i class="fa fa-home"></i>Home</li></a
-          >
-          <a href="/about">
-            <li><i class="fa fa-address-card"></i>About</li></a
-          >
-          <a href="/contact" class="active"
-            ><li><i class="fa fa-address-book"></i>Contact</li></a
-          >
-          <a href="/license"
-            ><li><i class="fa fa-file-alt"></i>License</li></a
-          >
-          <a href="/disclaimer"
-            ><li><i class="fa fa-file-contract"></i>Disclaimer</li></a
-          >
+          <a href="/">
+            <li><i class="fa fa-home"></i>Home</li>
+          </a>
+          <a href="/about"><
+            li><i class="fa fa-address-card"></i>About</li>
+          </a>
+          <a href="/contact" class="active">
+            <li><i class="fa fa-address-book"></i>Contact</li>
+          </a>
+          <a href="/license">
+            <li><i class="fa fa-file-alt"></i>License</li>
+          </a>
+          <a href="/disclaimer">
+            <li><i class="fa fa-file-contract"></i>Disclaimer</li>
+          </a>
           <hr />
-          <a href="/entertainment"
-            ><li><i class="fa fa-tv"></i>Entertainment</li></a
-          >
-          <a href="/sports"
-            ><li><i class="fa fa-football-ball"></i>Sports</li></a
-          >
-          <a href="/gaming"
-            ><li><i class="fa fa-gamepad"></i>Gaming</li></a
-          >
-          <a href="/money"
-            ><li><i class="fa fa-chart-line"></i>Money</li></a
-          >
+          <a href="/entertainment">
+            <li><i class="fa fa-tv"></i>Entertainment</li>
+          </a>
+          <a href="/sports">
+            <li><i class="fa fa-football-ball"></i>Sports</li>
+          </a>
+          <a href="/gaming">
+            <li><i class="fa fa-gamepad"></i>Gaming</li>
+          </a>
+          <a href="/money">
+            <li><i class="fa fa-chart-line"></i>Money</li>
+          </a>
         </ul>
       </div>
 
-    <header>
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <h3 class="animate-charcter"><a href="https://kongregated.com">Kongregated</a></h3>
+      <header>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h3 class="animate-charcter">
+              <a href="https://kongregated.com">Kongregated</a>
+            </h3>
+          </div>
         </div>
+      </header>
+
+      <div class="container">
+        <div id="posts">
+          <ul class="list-unstyled"></ul>
+        </div>
+
+        <div id="yt">
+          <ul class="list-unstyled"></ul>
+        </div>
+        <script src="/youtube.js"></script>
+
+        <div class="wrapper">
+          <iframe
+            width="600"
+            height="615"
+            src="https://www.redditmedia.com/r/BostonBruins/comments/u5l8c0/hoppy_easter_everyone_hope_this_guy_laid_a_bunch/?ref_source=embed&amp;ref=share&amp;embed=true"
+            sandbox="allow-scripts allow-same-origin allow-popups"
+            style="
+              border: medium none;
+              --darkreader-inline-border-top: currentcolor;
+              --darkreader-inline-border-right: currentcolor;
+              --darkreader-inline-border-bottom: currentcolor;
+              --darkreader-inline-border-left: currentcolor;
+            "
+            data-darkreader-inline-border-top=""
+            data-darkreader-inline-border-right=""
+            data-darkreader-inline-border-bottom=""
+            data-darkreader-inline-border-left=""
+            scrolling="no"
+            width="560"
+            height="527"
+          ></iframe>
+        </div>
+
+        <!-- Google Adsense -->
+        <!-- <div class="wrapper"> -->
+        <!-- testing -->
+        <!--   <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1986239776163139" data-ad-slot="9038537569" -->
+        <!--     data-ad-format="auto" data-full-width-responsive="true"></ins> -->
+        <!-- </div> -->
       </div>
-    </header>
 
-    <div class="container">
-
-      <div id="posts">
-        <ul class="list-unstyled"></ul>
-      </div>
-
-      <div id="yt">
-        <ul class="list-unstyled"></ul>
-      </div>
-      <script src="/youtube.js"> </script>
-
-      <div class="wrapper">
-        <iframe width="600" height="615"
-          src="https://www.redditmedia.com/r/BostonBruins/comments/u5l8c0/hoppy_easter_everyone_hope_this_guy_laid_a_bunch/?ref_source=embed&amp;ref=share&amp;embed=true"
-          sandbox="allow-scripts allow-same-origin allow-popups"
-          style="border: medium none; --darkreader-inline-border-top: currentcolor; --darkreader-inline-border-right: currentcolor; --darkreader-inline-border-bottom: currentcolor; --darkreader-inline-border-left: currentcolor;"
-          data-darkreader-inline-border-top="" data-darkreader-inline-border-right=""
-          data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="" scrolling="no" width="560"
-          height="527"></iframe>
-      </div>
-
-      <!-- Google Adsense -->
-      <!-- <div class="wrapper"> -->
-      <!-- testing -->
-      <!--   <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1986239776163139" data-ad-slot="9038537569" -->
-      <!--     data-ad-format="auto" data-full-width-responsive="true"></ins> -->
-      <!-- </div> -->
-
+      <footer>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/license">License</a></li>
+          <li><a href="/disclaimer">Disclaimer</a></li>
+        </ul>
+      </footer>
     </div>
-
-    <footer>
-      <ul>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/license">License</a></li>
-        <li><a href="/disclaimer">Disclaimer</a></li>
-      </ul>
-    </footer>
-
-  </div>
-  <script src="/loader.js"> </script>
-  <script src="/shuffle.js"> </script>
-
-</body>
-
+    <script src="/loader.js"></script>
+    <script src="/shuffle.js"></script>
+  </body>
 </html>
