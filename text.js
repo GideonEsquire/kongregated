@@ -34,21 +34,14 @@ function reddit_list(news) {
           .append(
             $("<p class = 're'></p>")
               .append(
-                "<a class = 'title' target = '_blank' href = " +
-                  'http://www.' +
-                  obj.domain +
-                  '></a>'
-              )
-              .append(
                 "<a target = '_blank' href = " +
                   link +
                   "><text class = 're-title'>" +
                   obj.title +
-                  "</text><a/>  <a target = '_blank' style = 'color:grey;outline:0' href=http://www." +
+                  "</text><a/>" +
+                  "<text style = 'color:grey;'> " +
                   obj.domain +
-                  '>(' +
-                  obj.domain +
-                  ')</a>'
+                  "</text>"
               )
           )
           .append(
@@ -56,7 +49,7 @@ function reddit_list(news) {
               "<p class='re-under'><a target = '_blank' href = " +
                 'http://reddit.com' +
                 obj.permalink +
-                ' <b>comments</b></font></a>'
+                ' <b class="fa fa-bars"></b></font></a>'
             )
           )
       )
