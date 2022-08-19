@@ -1,7 +1,8 @@
 var prevScrollpos = window.pageYOffset
 window.onscroll = function () {
   var currentScrollPos = window.pageYOffset
-  setTimeout(() => {
+
+  // setTimeout(() => {
     if (prevScrollpos > currentScrollPos) {
       document.getElementsByClassName('btn')[0].style.top = '0'
     } else {
@@ -13,5 +14,5 @@ window.onscroll = function () {
       // console.log(document.getElementsByClassName("sidebar")[0])
     }
     prevScrollpos = currentScrollPos
-  }, 100)
+  // }, 100)
 }

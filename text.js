@@ -1,15 +1,26 @@
 if (!SUBREDDITS) {
-  var SUBREDDITS = [
-    'oddlysatisfying',
-    'awww',
-    'worldnews',
-    'perfecttiming',
-    'listentothis',
-    'futurology',
-    'askscience',
-    'dataisbeautiful',
-    'todayilearned',
-  ]
+  var SUBREDDITS = {
+    'oddlysatisfying' : 4,
+    'awww' : 2,
+    'worldnews' : 5,
+    'perfecttiming' : 2,
+    'listentothis' : 1,
+    'futurology' : 1,
+    'askscience' : 1,
+    'dataisbeautiful' : 3,
+    'todayilearned' : 3,
+  }
+  // var SUBREDDITS = [
+  //   'oddlysatisfying',
+  //   'awww',
+  //   'worldnews',
+  //   'perfecttiming',
+  //   'listentothis',
+  //   'futurology',
+  //   'askscience',
+  //   'dataisbeautiful',
+  //   'todayilearned',
+  // ]
 }
 
 function correct_url(text) {
@@ -19,14 +30,23 @@ function correct_url(text) {
   return html
 }
 
-function reddit_list(news) {
+function correct_title(text) {
+  // Remove the abbreviations and things
+  var txt = $.trim(text)
+  if (txt) txt = txt.replace(/\[OC\]/, '')
+  if (txt) txt = txt.replace(/TIL/, 'Today I learned')
+  return txt
+}
+
+function reddit_list(posts) {
   var l = $('#posts .list-unstyled')
 
   // clear the existing list
   $(' #posts .list-unstyled .wrapper').remove()
 
-  $.each(news, function (index, obj) {
+  $.each(posts, function (index, obj) {
     var link = correct_url(obj.url)
+    var title = correct_title(obj.title)
 
     l.append(
       $('<div class="wrapper"></div>').append(
@@ -37,7 +57,7 @@ function reddit_list(news) {
                 "<a target = '_blank' href = " +
                   link +
                   "><text class = 're-title'>" +
-                  obj.title +
+                  title +
                   "</text><a/>" +
                   "<text style = 'color:grey;'> " +
                   obj.domain +
@@ -57,17 +77,32 @@ function reddit_list(news) {
   })
 }
 
-var news = []
+var posts = []
 
-for (let index = 0; index < SUBREDDITS.length; index++) {
+const keys = Object.keys(SUBREDDITS)
+
+keys.forEach((key, index) => {
   reddit
-    .top(SUBREDDITS[index])
+    .top(key)
     .t('day')
-    .limit(5)
+    .limit(SUBREDDITS[key])
     .fetch(function (res) {
       for (var i = 0; i < res.data.children.length; i++) {
-        news.push(res.data.children[i].data)
+        posts.push(res.data.children[i].data)
       }
-      reddit_list(news)
+      reddit_list(posts)
     })
-}
+});
+
+// for (let index = 0; index < SUBREDDITS.keys.length; index++) {
+//   reddit
+//     .top(SUBREDDITS.index)
+//     .t('day')
+//     .limit(5)
+//     .fetch(function (res) {
+//       for (var i = 0; i < res.data.children.length; i++) {
+//         posts.push(res.data.children[i].data)
+//       }
+//       reddit_list(posts)
+//     })
+// }
