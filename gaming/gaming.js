@@ -1,11 +1,11 @@
-var SUBREDDITS = [
-  'gaming',
-  'truegaming',
-  'patientgamers',
-  'pcmasterrace',
-  'leagueoflegends',
-  'games',
-]
+var SUBREDDITS = {
+  'gaming' : 10,
+  'truegaming' : 2,
+  'patientgamers' : 2,
+  'pcmasterrace' : 4,
+  'leagueoflegends' : 1,
+  'games' : 5,
+}
 
 var YT_USERS = [
   'jacksepticeye',

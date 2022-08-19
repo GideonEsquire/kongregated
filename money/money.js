@@ -1,10 +1,10 @@
-var SUBREDDITS = [
-  'investing',
-  'personalfinance',
-  'wallstreetbets',
-  'cryptocurrency',
-  'financialindependence',
-]
+var SUBREDDITS = {
+  'investing' : 5,
+  'personalfinance' : 2,
+  'wallstreetbets' : 1,
+  'cryptocurrency' : 1,
+  'financialindependence' : 2,
+}
 
 var YT_USERS = [
   'sfldiscounts', //financial education
