@@ -10,17 +10,6 @@ if (!SUBREDDITS) {
     'dataisbeautiful' : 3,
     'todayilearned' : 3,
   }
-  // var SUBREDDITS = [
-  //   'oddlysatisfying',
-  //   'awww',
-  //   'worldnews',
-  //   'perfecttiming',
-  //   'listentothis',
-  //   'futurology',
-  //   'askscience',
-  //   'dataisbeautiful',
-  //   'todayilearned',
-  // ]
 }
 
 function correct_url(text) {
@@ -86,23 +75,10 @@ keys.forEach((key, index) => {
     .top(key)
     .t('day')
     .limit(SUBREDDITS[key])
-    .fetch(function (res) {
+    .fetch(res => {
       for (var i = 0; i < res.data.children.length; i++) {
         posts.push(res.data.children[i].data)
       }
       reddit_list(posts)
     })
 });
-
-// for (let index = 0; index < SUBREDDITS.keys.length; index++) {
-//   reddit
-//     .top(SUBREDDITS.index)
-//     .t('day')
-//     .limit(5)
-//     .fetch(function (res) {
-//       for (var i = 0; i < res.data.children.length; i++) {
-//         posts.push(res.data.children[i].data)
-//       }
-//       reddit_list(posts)
-//     })
-// }
