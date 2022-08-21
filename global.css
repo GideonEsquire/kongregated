@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Nunito:wght@500;700&display=swap');
 
-/* testing the nav */
 #checkbox, .btn span { /* Hide the checkbox input & word "Menu" in the button */
   display: none;
 }
 
-/* Menu button - starts */
 .btn {
   display: block;
   position: fixed;
@@ -21,7 +19,6 @@
   transition: top .3s ease-in-out, width .3s ease-in-out;
 }
 
-/* Sidebar - starts */
 .sidebar {
   background-color: #4c566a;
   position: fixed;
@@ -83,14 +80,7 @@
     width: 250px;
     padding: 0 20px;
 }
-
-/* End of testing nav */
-
-
-
-
-
-
+/* End of nav */
 
 
 /* Polar night */
@@ -244,7 +234,7 @@ img {
   }
 }
 
-/* LOADER 3 */
+/* LOADER */
 .loader {
   display: flex;
   height: 100vh;
@@ -285,9 +275,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* bottom: 0; */
   font-size: 0.5em;
-  /* height: 60px; */
   width: 100%;
 }
 
@@ -315,46 +303,4 @@ footer ul {
 
 footer li {
   padding: 0;
-}
-
-footer li a,
-.dropbtn {
-  display: inline-block;
-  /* color: white; */
-  text-align: center;
-  text-decoration: none;
-}
-
-footer li a:hover,
-.dropdown:hover .dropbtn {
-  /* background-color: red; */
-}
-
-footer li.dropdown {
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  /* background-color: #f9f9f9; */
-  min-width: 160px;
-  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }
