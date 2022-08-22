@@ -1,12 +1,16 @@
+$('#sidebar').append('<input type="checkbox" id="checkbox" />')
+
 $('#sidebar').append(
-  '<input type="checkbox" id="checkbox" />' +
   '<label class="btn" for="checkbox">' +
     '<i class="fa fa-bars"></i>' +
     '<span>Menu</span>' +
-  '</label>' +
+  '</label>'
+)
+
+$('#sidebar').append(
   '<div class="sidebar">' +
     '<ul>' +
-      '<a href="#" class="active">' +
+      '<a href="/" class="active">' +
         '<li><i class="fa fa-home"></i>Home</li>' +
       '</a>' +
       '<a href="/about">' +
