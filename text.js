@@ -1,14 +1,14 @@
 if (!SUBREDDITS) {
   var SUBREDDITS = {
-    'oddlysatisfying' : 4,
-    'awww' : 2,
-    'worldnews' : 5,
-    'perfecttiming' : 2,
-    'listentothis' : 1,
-    'futurology' : 1,
-    'askscience' : 1,
-    'dataisbeautiful' : 3,
-    'todayilearned' : 3,
+    oddlysatisfying: 4,
+    awww: 2,
+    worldnews: 5,
+    perfecttiming: 2,
+    listentothis: 1,
+    futurology: 1,
+    askscience: 1,
+    dataisbeautiful: 3,
+    todayilearned: 3,
   }
 }
 
@@ -41,17 +41,16 @@ function reddit_list(posts) {
       $('<div class="wrapper"></div>').append(
         $('<li></li>')
           .append(
-            $("<p class = 're'></p>")
-              .append(
-                "<a target = '_blank' href = " +
-                  link +
-                  "><text class = 're-title'>" +
-                  title +
-                  "</text><a/>" +
-                  "<text style = 'color:grey;'> " +
-                  obj.domain +
-                  "</text>"
-              )
+            $("<p class = 're'></p>").append(
+              "<a target = '_blank' href = " +
+                link +
+                "><text class = 're-title'>" +
+                title +
+                '</text><a/>' +
+                "<text style = 'color:grey;'> " +
+                obj.domain +
+                '</text>'
+            )
           )
           .append(
             $(
@@ -75,10 +74,10 @@ keys.forEach((key, index) => {
     .top(key)
     .t('day')
     .limit(SUBREDDITS[key])
-    .fetch(res => {
+    .fetch((res) => {
       for (var i = 0; i < res.data.children.length; i++) {
         posts.push(res.data.children[i].data)
       }
       reddit_list(posts)
     })
-});
+})
