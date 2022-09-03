@@ -25,7 +25,6 @@ if (!YT_USERS) {
     'JerryRigEverything', // 'jerryrigeverything'
     'theslowmoguys', // 'the slomo guys'
     'gradyhillhouse', // 'practical engineering'
-
     // 'binging with babish'<-- I don't know the user name
     // 'stuffmadehere',<-- I don't know the user name
     // 'joshua weissman'<-- I don't know the user name
@@ -34,14 +33,13 @@ if (!YT_USERS) {
   ]
 }
 
-var x = $('#yt .list-unstyled')
-
 // clear the existing list
 $(' #yt .list-unstyled .wrapper').remove()
 
+var x = $('#yt .list-unstyled')
 $.each(YT_USERS, function (index, obj) {
   let r = Math.random()
-  if (r > 0.7) {
+  if (r > 0.9) {
     x.append(
       $('<div class="wrapper"></div>').append(
         $('<li></li>').append(
