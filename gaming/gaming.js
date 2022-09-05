@@ -8,18 +8,18 @@ var SUBREDDITS = {
 }
 
 var YT_USERS = [
-  'jacksepticeye',
-  'PewDiePie',
-  'direwolf20',
-  'GameGrumps',
-  'SeaNanners',
-  'BlueXephos', //yogscast
-  'CrushSlash', //LazarBeam
-  'VanossGaming',
-  'CaptainSparklez',
-  'EthosLab',
-  'videogamedunkey',
-  'VideoGameSeppuku', //Barbarousking
-  'Smallantone',
-  'day9tv',
+  'YzPXprvl5Y-Sf0g4vX-m6g', //'jacksepticeye'
+  '-lHJZR3Gqxm24_Vd_AJ5Yw', //'PewDiePie'
+  '_ViSsVg_3JUDyLS3E2Un5g', //'direwolf20'
+  '9CuvdOVfMPvKCiwdGKL3cQ', //'GameGrumps'
+  'H-_hzb2ILSCo9ftVSnrCIQ',//'BlueXephos'
+  'FKDEp9si4RmHFWJW1vYsMA', //'EthosLab'
+  'svn_Po0SmunchJYOWpOxMg', //'videogamedunkey'
+  'W6aFryqEcJ-QYgmg-zLhVg', //'Barbarousking',
+  '0VVYtw21rg2cokUystu2Dw', //'Smallantone'
+  'axar6TBM-94_ezoS00fLkA', //'day9tv'
+  //'CrushSlash'
+  //'SeaNanners'
+  //'VanossGaming'
+  //'CaptainSparklez'
 ]

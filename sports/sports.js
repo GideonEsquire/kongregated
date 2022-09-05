@@ -7,8 +7,8 @@ var SUBREDDITS = {
 }
 
 var YT_USERS = [
-  '2012NBCOlympics', //nbc sports news
-  'ESPNsoccernet',
-  'ESPN',
-  //'thehockeyguy', I don't know the username
+  'qZQlzSHbVJrwrn5XvzrzcA', //'2012NBCOlympics'
+  '6c1z7bA__85CIWZ_jpCK-Q', //'ESPNsoccernet'
+  'iWLfSweyRNmLpgEHekhoAg', //'ESPN'
+  '_AFyA9FqrZ57bb9QRH77wg', //'thehockeyguy'
 ]

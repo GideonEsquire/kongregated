@@ -7,9 +7,9 @@ var SUBREDDITS = {
 }
 
 var YT_USERS = [
-  'sfldiscounts', //financial education
-  'WSJDigitalNetwork', // 'wall street journal'
-  //'winthehouseyoulove', I don't know username
-  //'grahamstephan', I don't know username
-  //'andrei jikh', I don't know username
+  'nMn36GT_H0X-w5_ckLtlgQ', //'financial education'
+  'K7tptUDHh-RYDsdxO1-5QQ', //'wall street journal'
+  'kIdUg2r0FwwcN_0zNJ1KUg', //'winthehouseyoulove'
+  'V6KDgJskWaEckne5aPA0aQ', //'grahamstephan'
+  'Gy7SkBjcIAgTiwkXEtPnYg', //'andrei jikh'
 ]
