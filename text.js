@@ -50,7 +50,7 @@ function reddit_list(posts) {
   // clear the existing list
   $(' #posts .list-unstyled .wrapper').remove()
 
-  $.each(posts, function (index, obj) {
+  $.each(posts, function (_, obj) {
     const link = correct_url(obj.url)
     const title = correct_title(obj.title)
     const domain = correct_domain(obj.domain)
