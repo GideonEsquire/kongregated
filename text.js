@@ -31,7 +31,7 @@ function correct_title(text) {
   let txt = $.trim(text)
   if (txt) txt = txt.replace(/\[OC\]/i, '')
   if (txt) txt = txt.replace(/^til:?/i, 'Today I learned')
-  if (txt) txt = txt.replace(/^eli5/i, "Explain like I'm 5")
+  if (txt) txt = txt.replace(/^\[?eli5\]?:?/i, "Explain like I'm 5:")
   if (txt) txt = txt.replace(/^ysk:?\s?/i, '')
   return txt
 }
