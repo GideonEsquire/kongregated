@@ -1,125 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
 
-    <!-- chrome mobile changes color -->
-    <meta name="theme-color" content="#4c566a" />
+<head>
+  <meta charset="UTF-8" />
 
-    <meta
-      name="description"
-      content="Ad-free viewing of congregated content. Embedded content may sneak in ads :("
-    />
-    <meta name="keywords" content="free, no ads, anonymous, congregated" />
+  <!-- chrome mobile changes color -->
+  <meta name="theme-color" content="#4c566a" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <meta name="description" content="Ad-free viewing of congregated content. Embedded content may sneak in ads :(" />
+  <meta name="keywords" content="free, no ads, anonymous, congregated" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
-      integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <script src="/reddit.js"></script>
-    <script src="/text.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+    integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- <script src="/wiki.js"></script> -->
+  <script src="/reddit.js"></script>
+  <script src="/text.js"></script>
+  <!-- <script src="/wiki.js"></script> -->
+  <!-- <script src="/wotd.js"></script> -->
 
-    <script
-      defer
-      src="https://www.livecoinwatch.com/static/lcw-widget.js"
-    ></script>
-    <link rel="stylesheet" type="text/css" href="/global.css" />
-    <link rel="icon" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kongregated</title>
-  </head>
+  <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script>
 
-  <body>
-    <div class="loader">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+  <link rel="stylesheet" type="text/css" href="/global.css" />
+  <link rel="icon" href="/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kongregated</title>
+</head>
 
-    <div class="main">
-      <div id="sidebar"></div>
-      <script src="/sidebar.js"></script>
+<body>
+  <div class="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-      <header>
-        <!-- logo -->
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <h3 class="animate-charcter">Kongregated</h3>
-          </div>
-        </div>
-      </header>
+  <div class="main">
+    <div id="sidebar"></div>
+    <script src="/sidebar.js"></script>
 
-      <div class="container">
-        <div id="posts">
-          <ul class="list-unstyled"></ul>
-        </div>
-
-        <div class="wrapper">
-          <li>
-            <p class="re">
-              <a
-                target="_blank"
-                href="https://www.nytimes.com/games/wordle/index.html"
-              >
-                <text class="re-title"> Today's Wordle </text>
-              </a>
-              <text style="color: grey"> nytimes.com </text>
-            </p>
-          </li>
-        </div>
-
-        <div class="wrapper">
-          <li>
-            <p class="re">
-              <a
-                target="_blank"
-                href="https://www.chess.com/daily-chess-puzzle"
-              >
-                <text class="re-title">Chess puzzle of the day</text>
-              </a>
-              <text style="color: grey">chess.com</text>
-            </p>
-          </li>
-        </div>
-
-        <div id="yt">
-          <ul class="list-unstyled"></ul>
-        </div>
-        <script src="/youtube.js"></script>
-
-        <div class="wrapper">
-          <div
-            class="livecoinwatch-widget-1"
-            lcw-coin="ETH"
-            lcw-base="USD"
-            lcw-secondary="BTC"
-            lcw-period="d"
-            lcw-color-tx="#d8dee9"
-            lcw-color-pr="#d08770"
-            lcw-color-bg="#3b4252"
-            lcw-border-w="0"
-          ></div>
-        </div>
-
-        <div class="wrapper">
-          <img src="https://unsplash.it/600" alt="" />
+    <header>
+      <!-- logo -->
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h3 class="animate-charcter">Kongregated</h3>
         </div>
       </div>
+    </header>
 
-      <footer></footer>
-      <script src="/footer.js"></script>
+    <div class="container">
+      <div id="posts">
+        <ul class="list-unstyled"></ul>
+      </div>
+
+      <div class="wrapper">
+        <li>
+          <p class="re">
+            <a target="_blank" href="https://www.nytimes.com/games/wordle/index.html">
+              <text class="re-title"> Today's Wordle </text>
+            </a>
+            <text style="color: grey"> nytimes.com </text>
+          </p>
+        </li>
+      </div>
+
+      <div class="wrapper">
+        <li>
+          <p class="re">
+            <a target="_blank" href="https://www.chess.com/daily-chess-puzzle">
+              <text class="re-title">Chess puzzle of the day</text>
+            </a>
+            <text style="color: grey">chess.com</text>
+          </p>
+        </li>
+      </div>
+
+      <script src="/shuffle.js"></script>
+
+      <div id="yt">
+        <ul class="list-unstyled"></ul>
+      </div>
+      <script src="/youtube.js"></script>
+
+      <div class="wrapper">
+        <div class="livecoinwatch-widget-1" lcw-coin="ETH" lcw-base="USD" lcw-secondary="BTC" lcw-period="d"
+          lcw-color-tx="#d8dee9" lcw-color-pr="#d08770" lcw-color-bg="#3b4252" lcw-border-w="0"></div>
+      </div>
+
+      <div class="wrapper">
+        <img src="https://unsplash.it/600" alt="" />
+      </div>
     </div>
-    <!-- <script src='/wiki.js'></script> -->
 
-    <script src="/loader.js"></script>
-    <!-- <script src="/shuffle.js"></script> -->
-  </body>
+    <footer></footer>
+    <script src="/footer.js"></script>
+  </div>
+
+  <script src="/loader.js"></script>
+</body>
+
 </html>
