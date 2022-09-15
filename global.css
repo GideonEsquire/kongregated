@@ -1,16 +1,31 @@
-/* Polar night */
-/* #2e3440 #3b4252 #434c5e #4c566a */
-
-/* Sn0w storm */
-/* #d8dee9 #e5e9f0 #eceff4 */
-
-/* Frost */
-/* #8fbcbb #88c0d0 #81a1c1 #5e81ac */
-
-/* Aurora */
-/* #bf616a #d08770 #ebcb8b #a3be8c #b48ead */
 
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Nunito:wght@500;700&display=swap');
+
+:root {
+/* Polar night */
+  --dark0: #2e3440;
+  --dark1: #3b4252;
+  --dark2: #434c5e;
+  --dark3: #4c566a;
+
+/* Sn0w storm */
+  --light0: #d8dee9;
+  --light1: #e5e9f0;
+  --light2: #eceff4;
+
+/* Frost */
+  --frost0: #8fbcbb;
+  --frost1: #88c0d0;
+  --frost2: #81a1c1;
+  --frost3: #5e81ac;
+
+/* Aurora */
+  --red: #bf616a;
+  --orange: #d08770;
+  --yellow: #ebcb8b;
+  --green: #a3be8c;
+  --purple: #b48ead;
+}
 
 #checkbox,
 .btn span {
@@ -22,8 +37,8 @@
   display: block;
   position: fixed;
   top: 0;
-  background-color: #d08770;
-  color: #fff;
+  background-color: var(--orange);
+  color: var(--light2);
   width: 45px;
   height: 50px;
   line-height: 50px;
@@ -34,7 +49,7 @@
 }
 
 .sidebar {
-  background-color: #4c566a;
+  background-color: var(--dark1);
   position: fixed;
   overflow: auto;
   top: 50px;
@@ -56,7 +71,7 @@
   text-decoration: none;
   display: block;
   background-color: transparent;
-  color: #d8dee9;
+  color: var(--light0);
   padding: 10px 20px;
   font-size: 16px;
 }
@@ -73,8 +88,8 @@
 
 .sidebar ul a:hover,
 .sidebar ul a.active {
-  background-color: #3b4252;
-  color: #eceff4;
+  background-color: var(--dark0);
+  color: var(--light2);
 }
 
 .sidebar ul a:hover::before,
@@ -83,7 +98,7 @@
   top: 0;
   left: 0;
   content: '';
-  background-color: #d08770;
+  background-color: var(--orange);
   width: 4px;
   height: 100%;
 }
@@ -107,15 +122,15 @@
   scrollbar-width: none;
   margin: 0;
   padding: 0;
-  color: #d8dee8;
+  color: var(--light0);
   text-decoration: none;
 }
 
 body {
   box-sizing: border-box;
   font-family: Lora, sans-serif;
-  background-color: #3b4252;
-  background: linear-gradient(to left, #3b4252, #2e3440);
+  background-color: var(--dark1);
+  background: linear-gradient(to left, var(--dark1), var(--dark0));
 }
 
 .main {
@@ -143,12 +158,12 @@ header {
   box-sizing: border-box;
   max-width: 620px;
   justify-content: center;
-  background: #3b4252;
+  background: var(--dark1);
   margin: 0.5em;
   border-radius: 10px;
   width: 95%;
-  box-shadow: 2px 3px 6px 2px #2e3440;
-  -webkit-box-shadow: 2px 3px 6px 2px #2e3440;
+  box-shadow: 2px 3px 6px 2px var(--dark0);
+  -webkit-box-shadow: 2px 3px 6px 2px var(--dark0);
   overflow: hidden;
 }
 
@@ -188,18 +203,17 @@ img {
 .animate-charcter {
   background-image: linear-gradient(
     -90deg,
-    #5e81ac 0%,
-    #81a1c1 30%,
-    #88c0d0 40%,
-    #d8dee8 50%,
-    #8fbcbb 70%,
-    #5e81ac 100%
+    var(--frost3) 0%,
+    var(--frost2) 30%,
+    var(--frost1) 40%,
+    var(--light0) 50%,
+    var(--frost0) 70%,
+    var(--frost3) 100%
   );
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
   background-clip: text;
-  /* text-fill-color: transparent; */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 16s linear infinite;
@@ -248,7 +262,7 @@ img {
 
 .loader > span {
   display: inline-block;
-  background-color: #5e81ac;
+  background-color: var(--frost3);
   width: 0px;
   height: 0px;
   border-radius: 50%;
@@ -258,7 +272,7 @@ img {
 }
 
 .loader > span:nth-child(2) {
-  background-color: #88c0d0;
+  background-color: var(--frost1);
   animation-delay: 0.2s;
 }
 
