@@ -64,6 +64,7 @@ $.each(YT_USERS, (_, obj) => {
       $('<div class="wrapper"></div>').append(
         $('<li></li>').append(
           '<iframe width="600" height="340" ' +
+            'title="Youtube video"' +
             'src="https://www.youtube-nocookie.com/embed/videoseries?list=UU' +
             obj +
             '&color=white" frameborder="0" allowfullscreen></iframe>'

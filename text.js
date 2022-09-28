@@ -60,20 +60,20 @@ function reddit_list(posts) {
       $('<div class="wrapper"></div>').append(
         $('<li></li>')
           .append(
-            $("<p class = 're'></p>").append(
-              "<a target = '_blank' href = " +
+            $("<p class='re'></p>").append(
+              "<a target='_blank' href=" +
                 link +
-                "><text class = 're-title'>" +
+                "><text class='re-title'>" +
                 title +
-                '</text><a/>' +
-                "<text style = 'color:grey;'> " +
+                '</text></a>' +
+                "<text style='color:grey;'> " +
                 domain +
                 '</text>'
             )
           )
           .append(
             $(
-              "<p class='re-under'><a target = '_blank' href = " +
+              "<p class='re-under'><a title='Discussion' target='_blank' href=" +
                 'http://reddit.com' +
                 obj.permalink +
                 ' <b class="fa fa-bars"></b></font></a>'
