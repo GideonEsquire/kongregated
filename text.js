@@ -4,6 +4,7 @@ if (!SUBREDDITS) {
     awww: 2,
     books: 1,
     dataisbeautiful: 3,
+    europe: 2,
     explainlikeimfive: 1,
     futurology: 1,
     games: 1,
@@ -13,9 +14,9 @@ if (!SUBREDDITS) {
     showerthoughts: 1,
     technology: 1,
     todayilearned: 3,
+    truefilm: 1,
     worldnews: 5,
     youshouldknow: 2,
-    truefilm: 1,
   }
 }
 
