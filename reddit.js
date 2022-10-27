@@ -13,39 +13,12 @@
   reddit.top = (subreddit) =>
     listing({ subreddit: subreddit, resource: 'top' }, ['t'])
 
-  reddit.controversial = (subreddit) =>
-    listing({ subreddit: subreddit, resource: 'controversial' }, ['t'])
-
-  reddit['new'] = (subreddit) =>
-    listing({ subreddit: subreddit, resource: 'new' })
-
-  reddit.about = (subreddit) =>
-    fetch({ subreddit: subreddit, resource: 'about' })
-
-  reddit.random = (subreddit) =>
-    fetch({ subreddit: subreddit, resource: 'random' })
-
-  reddit.info = (subreddit) => {
-    var on = {
-      subreddit: subreddit,
-      resource: 'api/info',
-    }
-    return withFilters(on, ['id', 'limit', 'url'])
-  }
-
   reddit.comments = function (article, subreddit) {
     var on = {
       subreddit: subreddit,
       resource: 'comments/' + article,
     }
     return withFilters(on, ['comment', 'context', 'depth', 'limit', 'sort'])
-  }
-
-  reddit.recommendedSubreddits = function (srnames) {
-    var on = {
-      resource: 'api/recommend/sr/' + srnames,
-    }
-    return withFilters(on, ['omit'])
   }
 
   reddit.subredditsByTopic = function (query) {
