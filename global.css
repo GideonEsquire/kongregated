@@ -218,7 +218,7 @@ img {
   -webkit-text-fill-color: transparent;
   animation: textclip 16s linear infinite;
   display: inline-block;
-  font-size: 5em;
+  font-size: 4em;
 }
 
 @keyframes textclip {
