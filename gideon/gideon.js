@@ -48,7 +48,6 @@ var SUBREDDITS = {
   Seattle: 1,
   sysadmin: 1,
   technology: 1,
-  tldr: 1,
   todayilearned: 1,
   typescript: 1,
   UpliftingNews: 1,
@@ -105,3 +104,5 @@ var YT_USERS = [
     'Kp44bWWZIiOPShPN_ytShw', //'Wood whisperer'
     'X6b17PVsYBQ0ip5gyeme-Q', //'crash course'
 ]
+
+var ODDS = 0.7

@@ -56,7 +56,11 @@ $('#sidebar').append(
   )
 )
 
-document.getElementById(window.location.pathname).className = 'active'
+try {
+  document.getElementById(window.location.pathname).className = 'active'
+} catch(e) {
+  console.error(e);
+}
 
 let prevScrollpos = window.pageYOffset
 window.onscroll = () => {

@@ -53,13 +53,15 @@ if (!YT_USERS) {
   ]
 }
 
+var ODDS = ODDS ? ODDS : 0.95
+
 // clear the existing list
 $(' #yt .list-unstyled .wrapper').remove()
 
 var x = $('#yt .list-unstyled')
 $.each(YT_USERS, (_, obj) => {
   let r = Math.random()
-  if (r > 0.95) {
+  if (r > ODDS) {
     x.append(
       $('<div class="wrapper"></div>').append(
         $('<li></li>').append(
